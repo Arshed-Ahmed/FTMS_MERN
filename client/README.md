@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# FTMS Client (Frontend)
 
-## Getting Started
+The frontend application for the Fashion Tailoring Management System, built with React and Vite.
 
-First, run the development server:
+## Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Framework**: React (Vite)
+- **Styling**: Tailwind CSS
+- **Icons**: Lucide React
+- **Routing**: React Router Dom
+- **HTTP Client**: Axios
+- **Notifications**: React Toastify
+- **Components**: Custom reusable components (DataTable, Layout, etc.)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `src/components/`: Reusable UI components (Header, Sidebar, DataTable, Layout).
+- `src/pages/`: Individual page views (Dashboard, OrderList, CustomerForm, etc.).
+- `src/context/`: Global state management (AuthContext).
+- `src/constants.js`: Global constants (API URL).
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Key Features
 
-## Learn More
+- **Responsive Design**: Built with Tailwind CSS for mobile and desktop.
+- **DataTables**: Custom component for sorting, filtering, and pagination.
+- **Authentication**: Protected routes based on login status and roles.
+- **Print Layouts**: Specialized CSS for printing invoices and reports.
 
-To learn more about Next.js, take a look at the following resources:
+## Setup & Installation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Install dependencies:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   ```bash
+   npm install
+   ```
 
-## Deploy on Vercel
+2. Configure Environment Variables:
+   Create a `.env` file in the root of the `client` directory:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```env
+   VITE_API_URL=http://localhost:5000
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+3. Run the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+## Maintenance
+
+- **Adding Pages**: Create a component in `src/pages/`, add a route in `App.jsx`.
+- **Navigation**: Add links to `src/components/Sidebar.jsx`.
+- **API Calls**: Use `axios` with `withCredentials: true` for authenticated requests.
+
+## Future Improvements
+
+- **Dark Mode**: Implement system-wide dark mode using Tailwind.
+- **PWA**: Convert to a Progressive Web App for offline capabilities.
+- **Kanban Board**: Drag-and-drop interface for Job Cards.
+- **Advanced Charts**: More detailed analytics using Recharts or Chart.js.
