@@ -1,0 +1,95 @@
+{"level":"info","message":"MongoDB Connected: localhost","timestamp":"2025-12-11 10:26:23:2623"}
+{"level":"info","message":"MongoDB Connected: localhost","timestamp":"2025-12-11 10:27:01:271"}
+{"level":"info","message":"MongoDB Connected: localhost","timestamp":"2025-12-11 10:27:09:279"}
+{"level":"info","message":"MongoDB Connected: localhost","timestamp":"2025-12-11 10:27:20:2720"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-12-11 10:27:47:2747"}
+{"level":"info","message":"MongoDB Connected: localhost","timestamp":"2025-12-11 10:27:48:2748"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-12-11 10:28:00:280"}
+{"level":"info","message":"MongoDB Connected: localhost","timestamp":"2025-12-11 10:28:00:280"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-12-11 10:28:30:2830"}
+{"level":"info","message":"MongoDB Connected: localhost","timestamp":"2025-12-11 10:28:30:2830"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-12-11 10:29:10:2910"}
+{"level":"info","message":"MongoDB Connected: localhost","timestamp":"2025-12-11 10:29:10:2910"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-12-11 10:33:12:3312"}
+{"level":"info","message":"MongoDB Connected: localhost","timestamp":"2025-12-11 10:33:12:3312"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-12-11 10:33:30:3330"}
+{"level":"info","message":"MongoDB Connected: localhost","timestamp":"2025-12-11 10:33:30:3330"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-12-11 10:34:27:3427"}
+{"level":"info","message":"MongoDB Connected: localhost","timestamp":"2025-12-11 10:34:27:3427"}
+{"level":"error","message":"401 - Not authorized, no token - /api/materials - POST - ::ffff:127.0.0.1","timestamp":"2025-12-11 10:36:28:3628"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-12-11 10:36:52:3652"}
+{"level":"info","message":"MongoDB Connected: localhost","timestamp":"2025-12-11 10:36:52:3652"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-12-11 10:38:02:382"}
+{"level":"info","message":"MongoDB Connected: localhost","timestamp":"2025-12-11 10:38:03:383"}
+{"level":"error","message":"400 - Transaction numbers are only allowed on a replica set member or mongos - /api/orders - POST - ::ffff:127.0.0.1","timestamp":"2025-12-11 10:39:07:397"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-12-11 10:39:25:3925"}
+{"level":"info","message":"MongoDB Connected: localhost","timestamp":"2025-12-11 10:39:25:3925"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-12-11 10:40:28:4028"}
+{"level":"info","message":"MongoDB Connected: localhost","timestamp":"2025-12-11 10:40:28:4028"}
+{"level":"error","message":"400 - Cannot read properties of undefined (reading 'options') - /api/orders - POST - ::ffff:127.0.0.1","timestamp":"2025-12-11 10:40:46:4046"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-12-11 10:41:52:4152"}
+{"level":"info","message":"MongoDB Connected: localhost","timestamp":"2025-12-11 10:41:52:4152"}
+{"level":"error","message":"400 - Cannot read properties of undefined (reading 'options') - /api/orders - POST - ::ffff:127.0.0.1","timestamp":"2025-12-11 10:42:10:4210"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-12-11 10:42:41:4241"}
+{"level":"info","message":"MongoDB Connected: localhost","timestamp":"2025-12-11 10:42:41:4241"}
+{"level":"error","message":"400 - Cannot read properties of undefined (reading 'options') - /api/orders - POST - ::ffff:127.0.0.1","timestamp":"2025-12-11 10:42:59:4259"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-12-11 10:43:26:4326"}
+{"level":"info","message":"MongoDB Connected: localhost","timestamp":"2025-12-11 10:43:26:4326"}
+{"level":"error","message":"404 - Not Found - /api/payments - /api/payments - POST - ::ffff:127.0.0.1","timestamp":"2025-12-11 10:43:42:4342"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-12-11 10:49:36:4936"}
+{"level":"info","message":"MongoDB Connected: localhost","timestamp":"2025-12-11 10:49:36:4936"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-12-11 10:49:54:4954"}
+{"level":"info","message":"MongoDB Connected: localhost","timestamp":"2025-12-11 10:49:54:4954"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-12-11 10:50:23:5023"}
+{"level":"info","message":"MongoDB Connected: localhost","timestamp":"2025-12-11 10:50:23:5023"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-12-11 10:50:53:5053"}
+{"level":"info","message":"MongoDB Connected: localhost","timestamp":"2025-12-11 10:50:54:5054"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-12-11 10:51:22:5122"}
+{"level":"info","message":"MongoDB Connected: localhost","timestamp":"2025-12-11 10:51:22:5122"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-12-11 11:08:56:856"}
+{"level":"info","message":"MongoDB Connected: localhost","timestamp":"2025-12-11 11:08:56:856"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-12-11 11:09:38:938"}
+{"level":"info","message":"MongoDB Connected: localhost","timestamp":"2025-12-11 11:09:38:938"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-12-11 11:09:51:951"}
+{"level":"info","message":"MongoDB Connected: localhost","timestamp":"2025-12-11 11:09:51:951"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-12-11 11:10:37:1037"}
+{"level":"info","message":"MongoDB Connected: localhost","timestamp":"2025-12-11 11:10:37:1037"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-12-11 11:11:45:1145"}
+{"level":"info","message":"MongoDB Connected: localhost","timestamp":"2025-12-11 11:11:45:1145"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-12-11 12:24:10:2410"}
+{"level":"info","message":"MongoDB Connected: localhost","timestamp":"2025-12-11 12:24:10:2410"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-12-11 12:24:51:2451"}
+{"level":"info","message":"MongoDB Connected: localhost","timestamp":"2025-12-11 12:24:51:2451"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-12-11 12:25:27:2527"}
+{"level":"info","message":"MongoDB Connected: localhost","timestamp":"2025-12-11 12:25:27:2527"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-12-11 12:26:11:2611"}
+{"level":"info","message":"MongoDB Connected: localhost","timestamp":"2025-12-11 12:26:11:2611"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-12-11 12:26:50:2650"}
+{"level":"info","message":"MongoDB Connected: localhost","timestamp":"2025-12-11 12:26:50:2650"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-12-11 12:53:21:5321"}
+{"level":"info","message":"MongoDB Connected: localhost","timestamp":"2025-12-11 12:53:21:5321"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-12-11 12:54:00:540"}
+{"level":"info","message":"MongoDB Connected: localhost","timestamp":"2025-12-11 12:54:00:540"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-12-11 12:59:23:5923"}
+{"level":"info","message":"MongoDB Connected: localhost","timestamp":"2025-12-11 12:59:23:5923"}
+{"level":"error","message":"400 - Transaction numbers are only allowed on a replica set member or mongos - /api/orders - POST - ::ffff:127.0.0.1","timestamp":"2025-12-11 12:59:45:5945"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-12-11 12:59:57:5957"}
+{"level":"info","message":"MongoDB Connected: localhost","timestamp":"2025-12-11 12:59:57:5957"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-12-11 14:04:48:448"}
+{"level":"info","message":"MongoDB Connected: localhost","timestamp":"2025-12-11 14:04:48:448"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-12-11 14:05:53:553"}
+{"level":"info","message":"MongoDB Connected: localhost","timestamp":"2025-12-11 14:05:53:553"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-12-11 14:09:52:952"}
+{"level":"info","message":"MongoDB Connected: localhost","timestamp":"2025-12-11 14:09:52:952"}
+{"level":"info","message":"Server running on port 5002","timestamp":"2025-12-11 14:14:29:1429"}
+{"level":"info","message":"MongoDB Connected: localhost","timestamp":"2025-12-11 14:14:29:1429"}
+{"level":"http","message":"{\"method\":\"GET\",\"url\":\"/api-docs\",\"status\":\"301\",\"responseTime\":\"10.648\"}","timestamp":"2025-12-11 14:15:35:1535"}
+{"level":"http","message":"{\"method\":\"GET\",\"url\":\"/api-docs/\",\"status\":\"200\",\"responseTime\":\"3.451\"}","timestamp":"2025-12-11 14:15:35:1535"}
+{"level":"http","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui-init.js\",\"status\":\"200\",\"responseTime\":\"0.472\"}","timestamp":"2025-12-11 14:15:35:1535"}
+{"level":"http","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui.css\",\"status\":\"200\",\"responseTime\":\"19.545\"}","timestamp":"2025-12-11 14:15:35:1535"}
+{"level":"http","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui-standalone-preset.js\",\"status\":\"200\",\"responseTime\":\"21.203\"}","timestamp":"2025-12-11 14:15:35:1535"}
+{"level":"http","message":"{\"method\":\"GET\",\"url\":\"/api-docs/swagger-ui-bundle.js\",\"status\":\"200\",\"responseTime\":\"88.392\"}","timestamp":"2025-12-11 14:15:36:1536"}
+{"level":"http","message":"{\"method\":\"GET\",\"url\":\"/api-docs/favicon-32x32.png\",\"status\":\"200\",\"responseTime\":\"2.036\"}","timestamp":"2025-12-11 14:15:36:1536"}
+{"level":"http","message":"{\"method\":\"GET\",\"url\":\"/api-docs/favicon-32x32.png\",\"status\":\"304\",\"responseTime\":\"1.301\"}","timestamp":"2025-12-11 14:15:37:1537"}
+{"level":"info","message":"Server running on port 5002","timestamp":"2025-12-11 14:16:08:168"}
+{"level":"info","message":"MongoDB Connected: localhost","timestamp":"2025-12-11 14:16:08:168"}

@@ -1,0 +1,7 @@
+{"level":"error","message":"401 - Not authorized, no token - /api/materials - POST - ::ffff:127.0.0.1","timestamp":"2025-12-11 10:36:28:3628"}
+{"level":"error","message":"400 - Transaction numbers are only allowed on a replica set member or mongos - /api/orders - POST - ::ffff:127.0.0.1","timestamp":"2025-12-11 10:39:07:397"}
+{"level":"error","message":"400 - Cannot read properties of undefined (reading 'options') - /api/orders - POST - ::ffff:127.0.0.1","timestamp":"2025-12-11 10:40:46:4046"}
+{"level":"error","message":"400 - Cannot read properties of undefined (reading 'options') - /api/orders - POST - ::ffff:127.0.0.1","timestamp":"2025-12-11 10:42:10:4210"}
+{"level":"error","message":"400 - Cannot read properties of undefined (reading 'options') - /api/orders - POST - ::ffff:127.0.0.1","timestamp":"2025-12-11 10:42:59:4259"}
+{"level":"error","message":"404 - Not Found - /api/payments - /api/payments - POST - ::ffff:127.0.0.1","timestamp":"2025-12-11 10:43:42:4342"}
+{"level":"error","message":"400 - Transaction numbers are only allowed on a replica set member or mongos - /api/orders - POST - ::ffff:127.0.0.1","timestamp":"2025-12-11 12:59:45:5945"}
