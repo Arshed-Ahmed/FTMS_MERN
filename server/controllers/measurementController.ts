@@ -1,0 +1,230 @@
+import { Request, Response } from 'express';
+import Measurement from '../models/Measurement.js';
+import { logAudit } from '../services/auditService.js';
+
+// @desc    Get all measurements
+// @route   GET /api/measurements
+// @access  Private
+const getMeasurements = async (req: Request, res: Response) => {
+  try {
+    const measurements = await Measurement.find({ isDeleted: false })
+      .populate('customer', 'firstName lastName phone')
+      .sort({ createdAt: -1 });
+    res.json(measurements);
+  } catch (error: any) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+// @desc    Get single measurement
+// @route   GET /api/measurements/:id
+// @access  Private
+const getMeasurementById = async (req: Request, res: Response) => {
+  try {
+    const measurement = await Measurement.findById(req.params.id)
+      .populate('customer', 'name email phone');
+
+    if (measurement) {
+      res.json(measurement);
+    } else {
+      res.status(404).json({ message: 'Measurement not found' });
+    }
+  } catch (error: any) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+// @desc    Get measurements by customer
+// @route   GET /api/measurements/customer/:customerId
+// @access  Private
+const getMeasurementsByCustomer = async (req: Request, res: Response) => {
+  try {
+    const measurements = await Measurement.find({ customer: req.params.customerId })
+      .populate('customer', 'name')
+      .sort({ createdAt: -1 });
+    res.json(measurements);
+  } catch (error: any) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+// @desc    Create new measurement
+// @route   POST /api/measurements
+// @access  Private
+const createMeasurement = async (req: Request, res: Response) => {
+  const {
+    customer,
+    item,
+    values,
+    notes,
+    moreDetails,
+  } = req.body;
+
+  try {
+    const measurement = new Measurement({
+      customer,
+      item,
+      values,
+      notes,
+      moreDetails,
+    });
+
+    const createdMeasurement = await measurement.save();
+
+    await logAudit({
+      req,
+      action: 'CREATE',
+      entity: 'Measurement',
+      entityId: createdMeasurement._id,
+      details: { customer, item },
+    });
+
+    res.status(201).json(createdMeasurement);
+  } catch (error: any) {
+    res.status(400).json({ message: error.message });
+  }
+};
+
+// @desc    Update measurement
+// @route   PUT /api/measurements/:id
+// @access  Private
+const updateMeasurement = async (req: Request, res: Response) => {
+  const {
+    customer,
+    item,
+    values,
+    notes,
+    moreDetails,
+  } = req.body;
+
+  try {
+    const measurement = await Measurement.findById(req.params.id);
+
+    if (measurement) {
+      measurement.customer = customer || measurement.customer;
+      measurement.item = item || measurement.item;
+      measurement.values = values || measurement.values;
+      measurement.notes = notes || measurement.notes;
+      measurement.moreDetails = moreDetails || measurement.moreDetails;
+
+      const updatedMeasurement = await measurement.save();
+
+      await logAudit({
+        req,
+        action: 'UPDATE',
+        entity: 'Measurement',
+        entityId: updatedMeasurement._id,
+        details: { customer, item },
+      });
+
+      res.json(updatedMeasurement);
+    } else {
+      res.status(404).json({ message: 'Measurement not found' });
+    }
+  } catch (error: any) {
+    res.status(400).json({ message: error.message });
+  }
+};
+
+// @desc    Soft delete measurement
+// @route   DELETE /api/measurements/:id
+// @access  Private
+const deleteMeasurement = async (req: Request, res: Response) => {
+  try {
+    const measurement = await Measurement.findById(req.params.id);
+
+    if (measurement) {
+      await measurement.softDelete();
+
+      await logAudit({
+        req,
+        action: 'DELETE',
+        entity: 'Measurement',
+        entityId: measurement._id,
+      });
+
+      res.json({ message: 'Measurement moved to trash' });
+    } else {
+      res.status(404).json({ message: 'Measurement not found' });
+    }
+  } catch (error: any) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+// @desc    Get trashed measurements
+// @route   GET /api/measurements/trash
+// @access  Private
+const getTrashedMeasurements = async (req: Request, res: Response) => {
+  try {
+    const measurements = await Measurement.find({ isDeleted: true })
+      .populate('customer', 'firstName lastName')
+      .sort({ updatedAt: -1 });
+    res.json(measurements);
+  } catch (error: any) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+// @desc    Restore measurement
+// @route   PUT /api/measurements/:id/restore
+// @access  Private
+const restoreMeasurement = async (req: Request, res: Response) => {
+  try {
+    const measurement = await Measurement.findById(req.params.id);
+    if (measurement) {
+      await measurement.restore();
+
+      await logAudit({
+        req,
+        action: 'RESTORE',
+        entity: 'Measurement',
+        entityId: measurement._id,
+      });
+
+      res.json({ message: 'Measurement restored' });
+    } else {
+      res.status(404).json({ message: 'Measurement not found' });
+    }
+  } catch (error: any) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+// @desc    Force delete measurement
+// @route   DELETE /api/measurements/:id/force
+// @access  Private
+const forceDeleteMeasurement = async (req: Request, res: Response) => {
+  try {
+    const measurement = await Measurement.findById(req.params.id);
+
+    if (measurement) {
+      await measurement.deleteOne();
+
+      await logAudit({
+        req,
+        action: 'FORCE_DELETE',
+        entity: 'Measurement',
+        entityId: measurement._id,
+      });
+
+      res.json({ message: 'Measurement permanently deleted' });
+    } else {
+      res.status(404).json({ message: 'Measurement not found' });
+    }
+  } catch (error: any) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+export {
+  getMeasurements,
+  getMeasurementById,
+  getMeasurementsByCustomer,
+  createMeasurement,
+  updateMeasurement,
+  deleteMeasurement,
+  getTrashedMeasurements,
+  restoreMeasurement,
+  forceDeleteMeasurement,
+};
